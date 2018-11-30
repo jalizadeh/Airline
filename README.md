@@ -2,4 +2,14 @@
 
 Source: The Java EE Course - Build a Java EE App From Scratch
 
-I try to keep all phases separate.
+Web #1:\
+	very fisrt configs\
+	direct html data sent via response\
+
+Web #2:\
+	"views" added\
+	forwarding to add_passenger.jsp\
+
+Web #3:\
+	form added\
+	POST & GET definition\
