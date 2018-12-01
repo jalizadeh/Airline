@@ -22,3 +22,7 @@ Web #5:\
 
 Web #6:\
 	getting the data sent from the form
+
+Web #7:\
+	form validation\
+	"request.setAttribute()"
