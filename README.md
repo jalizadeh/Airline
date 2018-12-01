@@ -19,3 +19,6 @@ Web #4:\
 
 Web #5:\
 	Passenger & Gender classes added
+
+Web #6:\
+	getting the data sent from the form
