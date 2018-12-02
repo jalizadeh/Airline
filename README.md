@@ -26,3 +26,7 @@ Web #6:\
 Web #7:\
 	form validation\
 	"request.setAttribute()"
+
+Web #8:\
+	showing form error messages\
+	theme.css > li.error
