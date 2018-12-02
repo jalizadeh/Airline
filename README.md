@@ -35,3 +35,7 @@ Web #9:\
 	handling successfull form submission #1\
 	response.sendRedirect("");\
 	"MainPage"
+
+Web #10:\
+	creating a Servlet Context Listener and adding the passenger list to the context\
+	"AirlineListener"
