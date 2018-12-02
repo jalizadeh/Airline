@@ -30,3 +30,8 @@ Web #7:\
 Web #8:\
 	showing form error messages\
 	theme.css > li.error
+
+Web #9:\
+	handling successfull form submission #1\
+	response.sendRedirect("");\
+	"MainPage"
