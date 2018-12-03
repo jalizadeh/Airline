@@ -39,3 +39,7 @@ Web #9:\
 Web #10:\
 	creating a Servlet Context Listener and adding the passenger list to the context\
 	"AirlineListener"
+
+Web #11:\
+	Synchronization and Thread Safety when adding new passengers\
+	BUG fixed: the "pList" creation was miswritten in "AirlineListener"
