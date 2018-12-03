@@ -43,3 +43,7 @@ Web #10:\
 Web #11:\
 	Synchronization and Thread Safety when adding new passengers\
 	BUG fixed: the "pList" creation was miswritten in "AirlineListener"
+
+Web #12:\
+	Improving form validation\
+	Bug fixed: misspell in class "Passenger", "dao" changed to "dob"
