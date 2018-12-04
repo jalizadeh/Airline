@@ -51,3 +51,7 @@ Web #12:\
 EJB #1:\
 	Creating a Stateless Session Bean\
 	"com.airline.service.FlightService"
+
+EJB #2:\
+	Injecting an EJB into a Servlet\
+	"com.jalizadeh.controllers.FlightDetails"
