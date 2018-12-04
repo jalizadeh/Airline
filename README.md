@@ -47,3 +47,7 @@ Web #11:\
 Web #12:\
 	Improving form validation\
 	Bug fixed: misspell in class "Passenger", "dao" changed to "dob"
+
+EJB #1:\
+	Creating a Stateless Session Bean\
+	"com.airline.service.FlightService"
