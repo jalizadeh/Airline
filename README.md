@@ -55,3 +55,7 @@ EJB #1:\
 EJB #2:\
 	Injecting an EJB into a Servlet\
 	"com.jalizadeh.controllers.FlightDetails"
+	BUG: line #27 must be uncommented
+
+EJB #3:\
+	Nature of Stateless Session Enterprise Java Beans - part I
