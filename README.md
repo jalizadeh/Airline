@@ -63,3 +63,8 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - `FlightService implements FlightLocal, FlightRemote` interfaces
 - `FlightRemote` has `@Remote` annotation
 - `private FlightRemote fsRemote;` has `@EJB` annotation
+
+#### EJB #8: Stateful Session Enterprise Java Beans
+- `FlightRemote` deleted. not needed anymore
+- `@Stateless (name = "flightStateless")` & `@Stateful (name = "flightStateful")`
+- `@EJB (beanName = "...")
