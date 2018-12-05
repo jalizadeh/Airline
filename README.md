@@ -58,3 +58,8 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - `FlightService implements FlightLocal` inerface
 - `FlightLocal` has `@Local` annotation
 - `private FlightLocal fs;` has `@EJB` annotation
+
+#### EJB #7: Session Beans Implementing a Remote Interface
+- `FlightService implements FlightLocal, FlightRemote` interfaces
+- `FlightRemote` has `@Remote` annotation
+- `private FlightRemote fsRemote;` has `@EJB` annotation
