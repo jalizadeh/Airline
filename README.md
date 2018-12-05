@@ -67,4 +67,7 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 #### EJB #8: Stateful Session Enterprise Java Beans
 - `FlightRemote` deleted. not needed anymore
 - `@Stateless (name = "flightStateless")` & `@Stateful (name = "flightStateful")`
-- `@EJB (beanName = "...")
+- `@EJB (beanName = "...")`
+
+#### EJB #9: Differences between Stateful and Stateless EJBs
+- `fs2` & `fsStateful2`
