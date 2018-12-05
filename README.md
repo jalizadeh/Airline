@@ -71,3 +71,6 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 
 #### EJB #9: Differences between Stateful and Stateless EJBs
 - `fs2` & `fsStateful2`
+
+#### EJB #10: Looking up Stateful EJBs through Java Naming and Directory Interface JNDI
+- EDIT: `com.jalizadeh.controllers` -> `com.airline.controllers`
