@@ -78,3 +78,8 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 #### EJB #11: Singleton Session Enterprise Java Beans
 - Definition of `Singleton`
 - `CounterBean`, `ShowCount`, `AddOne`
+
+#### EJB #12: Differences between Singleton and Stateful Enterprise Java Beans
+Showing the difference between:
+- `@Singleton` --> `CounterSingletonBean`
+- `@Stateful` --> `CounterStatefulBean`
