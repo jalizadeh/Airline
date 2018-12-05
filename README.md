@@ -80,6 +80,12 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - `CounterBean`, `ShowCount`, `AddOne`
 
 #### EJB #12: Differences between Singleton and Stateful Enterprise Java Beans
-Showing the difference between:
 - `@Singleton` --> `CounterSingletonBean`
 - `@Stateful` --> `CounterStatefulBean`
+
+#### EJB #13: Adding a Stateful bean to the Session Context through Session Context Listener
+- A bean can become availabe for all servlets in the application, via storing it in `session`\
+ but before keeping it, it is needed to be created for each session among the application and\
+ the use (browser), so we need a `SessionListener` and put the `@Stateful` EJB, inside it.\
+\
+ Then, the EJB is available, via `session.getAttribute(x,y)`
