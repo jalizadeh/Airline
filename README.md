@@ -74,3 +74,7 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 
 #### EJB #10: Looking up Stateful EJBs through Java Naming and Directory Interface JNDI
 - EDIT: `com.jalizadeh.controllers` -> `com.airline.controllers`
+
+#### EJB #11: Singleton Session Enterprise Java Beans
+- Definition of `Singleton`
+- `CounterBean`, `ShowCount`, `AddOne`
