@@ -2,6 +2,8 @@
 
 Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udemy.com/the-java-ee-course/)
 
+# Servlets and JSP
+
 #### Web #1: Creating a Servlet for adding passengers to a flight
 - very fisrt configs
 - direct html data sent via response
@@ -40,6 +42,10 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 
 #### Web #12: Improving form validation
 - Bug fixed: misspell in class `Passenger`, `dao` changed to `dob`
+
+
+
+# Enterprise Java Beans
 
 #### EJB #1: Creating a Stateless Session Bean
 - `com.airline.service.FlightService`
@@ -89,3 +95,79 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
  the use (browser), so we need a `SessionListener` and put the `@Stateful` EJB, inside it.\
 \
  Then, the EJB is available, via `session.getAttribute(x,y)`
+
+
+# Java Persistence API JPA & Relational Databases
+
+#### JPA #0: Introduction to the Java Persistence API
+
+#### JPA #0: Starting the Derby JavaDB Database
+- [Windows] Run `.../glassfish5/javadb/bin/startNetworkServer.bat` as the DB server\
+  As long as the window is open, communication to the DB is possible.
+
+#### JPA 0: Creating a DataSource on the Glassfish server
+- #1: "GlassFish Server Administration Console" -> `localhost:4848`
+
+- #2: `Resources` -> `JDBC` -> `JDBC Connection Pools` : `New`
+	- Pool Name: `AirlineDB`
+	- Resource Type: `javax.sql.DataSource`
+	- Database Driver Vendor: `Derby`
+	- [ ] Introspect (leave it unchecked)
+
+- #3: `Next`
+	- In `Additional Properties` table:
+		- Select and delete these from the table
+			1. "RetrieveMessageText"
+			2. "ShutdownDatabase"
+			3. "CreateDatabase"
+			4. "SSL"
+			5. "TraceFile"
+			6. "DataSourceName"
+			7. "TraceDirectory"
+			8. "SecurityMechanism"
+			9. "TraceLevel"
+			10. "TraceFileAppend"
+			11. "LoginTimeout"
+		- User: `Airline`
+		- DatabseName: `airline`
+		- Description: `Database for airline application`
+		- Password: `Airline`
+		- PortNumber: `1527` (according to DB server)
+		- ConnectionAttributes: `;create=true`
+
+- #4: `Finish`
+
+- #5: `Resources` -> `JDBC` -> `JDBC Connection Pools` -> `AirlineDB` : `General`
+	- `Ping` to test if everything is fine
+
+- #6: `Resources` -> `JDBC` -> `JDBC Resources` : `New`
+	- JNDI Name: `jdbc/airline`
+	- Pool Name: `AirlineDB`
+
+- #7: `OK`
+
+
+
+
+
+# How To Use
+- You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
+- Import each project you need
+- Add it to the server
+
+Note:\
+ #1: It is better not to add more than one project at a time. I did not change all the configuration,\
+ paths & ... of the projects, so there maybe there is some conflicts while running the application\
+ on the server.\
+ \
+ #2: Use the application via your browser at the address `localhost:8080/project_name/servlet_name`\
+ \
+ #3: Try to exit the browser (to terminate the project's session), and open the newly deployed\
+ project, in a new browser.
+
+
+# Technologies
+- Eclipse IDE
+- Java 1.8
+- GlassFish5
+- Apche Derby DB [included in GlassFish5]
