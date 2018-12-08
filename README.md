@@ -168,6 +168,11 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - `@Enumerated(EnumType.STRING)` & `@Enumerated(EnumType.STRING)`
 
 
+#### JPA 3: Injecting an Entity Manager associated with out Persistence Unit
+- `PassengerService`
+- `@PersistenceContext(unitName="airline")`
+
+
 # How To Use
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
 - Import each project you need
