@@ -159,6 +159,13 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - creating `jpa1` project
 - configuring `persistent.xml`
 
+#### JPA 2: Creating a JPA Entity class for passengers
+- `Passenger`, `Gender`, `FlightClass`
+- `@Entity`
+- `@Transient`
+- `@Id` & `@GeneratedValue(strategy = GenerationType.AUTO)`
+- `@Temporal(TemporalType.DATE)`
+- `@Enumerated(EnumType.STRING)` & `@Enumerated(EnumType.STRING)`
 
 
 # How To Use
