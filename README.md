@@ -5,8 +5,8 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 # Servlets and JSP
 
 #### Web #1: Creating a Servlet for adding passengers to a flight
-- very fisrt configs
-- direct html data sent via response
+- very first configurations
+- direct html data sent via `response`
 
 #### Web #2: Creating a JSP for showing an add passenger form
 - `views` added
@@ -16,10 +16,10 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - POST & GET definition
 
 #### Web #4: Adding static resources to our JSP for better styling
-- normalize.css & theme.css added
+- `normalize.css` & `theme.css` added
 
 #### Web #5: Creating a Java class that represents a passenger on a flight
-- Passenger & Gender classes added
+- `Passenger` & `Gender` classes added
 
 #### Web #6: Getting passenger form data into a new passenger object on form submission
 - getting the data sent from the form
@@ -41,7 +41,8 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - BUG fixed: the `pList` creation was miswritten in `AirlineListener`
 
 #### Web #12: Improving form validation
-- Bug fixed: misspell in class `Passenger`, `dao` changed to `dob`
+- BUG: misspell in class `Passenger`
+- BUG: `dao` changed to `dob`
 
 
 
@@ -106,7 +107,7 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
   As long as the window is open, communication to the DB is possible.
 
 #### JPA 0: Creating a DataSource on the Glassfish server
-- #1: "GlassFish Server Administration Console" -> `localhost:4848`
+- #1: `GlassFish Server Administration Console` -> `localhost:4848`
 
 - #2: `Resources` -> `JDBC` -> `JDBC Connection Pools` : `New`
 	- Pool Name: `AirlineDB`
@@ -147,7 +148,15 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - #7: `OK`
 
 
+#### JPA 0: Connecting to the database with Eclipse
+	Name: `Airline`
+	Username: `Airline`
+	Password: `Airline`
+	URL: `jdbc:derby://localhost:1527/airline;create=true` or `jdbc:derby:airline;create=true`
+	[x] Create database (if required)
+	[x] Save password
 
+#### JPA 1: Creating a Persistence Unit
 
 
 # How To Use
