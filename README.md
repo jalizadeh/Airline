@@ -147,16 +147,18 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 
 - #7: `OK`
 
-
 #### JPA 0: Connecting to the database with Eclipse
-	Name: `Airline`
-	Username: `Airline`
-	Password: `Airline`
-	URL: `jdbc:derby://localhost:1527/airline;create=true` or `jdbc:derby:airline;create=true`
-	[x] Create database (if required)
-	[x] Save password
+- Name: `Airline`
+- Username: `Airline`
+- Password: `Airline`
+- URL: `jdbc:derby://localhost:1527/airline;create=true` or `jdbc:derby:airline;create=true`
+- [x] Create database (if required)
+- [x] Save password
 
 #### JPA 1: Creating a Persistence Unit
+- creating `jpa1` project
+- configuring `persistent.xml`
+
 
 
 # How To Use
