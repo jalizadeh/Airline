@@ -3,9 +3,10 @@
 	<persistence-unit name="airline">
 		<!-- jta : java transaction api -->
 		<jta-data-source>jdbc/airline</jta-data-source>
+		<class>com.airline.models.Passenger</class>
+
 		<properties>
-			<!-- only used in development, at any connection, it will recreate the table -->
-			<property name="eclipseLink.ddl-generation" value="drop-and-create-tables"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
 		</properties>
 	</persistence-unit>
 </persistence>

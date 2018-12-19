@@ -22,7 +22,8 @@ public class Passenger implements Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO) it seems it causes error
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Integer id;
 
 	private String firstName;
