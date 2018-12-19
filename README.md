@@ -171,6 +171,12 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 #### JPA 3: Injecting an Entity Manager associated with out Persistence Unit
 - `PassengerService`
 - `@PersistenceContext(unitName="airline")`
+- I don't know what's wrong with my DB or IDE or .... I did everything as the video said,\
+	but, no data is saved in the DB.
+
+#### JPA 4: Adding new JPA Entity classes for flight and airplane
+- classes `FlightDestinations` & `Airplane` & `FlightDestinations` added
+
 
 
 # How To Use
