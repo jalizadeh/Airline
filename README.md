@@ -178,6 +178,18 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - classes `FlightDestinations` & `Airplane` & `FlightDestinations` added
 
 
+#### JPA 5: One to One relationship between Flight and Airplane
+|`Flight`|`Airplane`|
+|-|-|
+|@OneToOne\
+@JoinColumn(name = "airplane_fk")\
+private Airplane airplaneDetail;
+|
+@OneToOne(mappedBy = "airplaneDetail")\
+private Flight flight;
+|
+
+
 
 # How To Use
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
