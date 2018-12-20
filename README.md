@@ -195,7 +195,7 @@ Note:
 
 
 #### JPA 5: One to One relationship between Flight and Airplane
-- |`Flight`|`Airplane`|
+|`Flight`|`Airplane`|
 |-|-|
 |@OneToOne<br>@JoinColumn(name = "airplane_fk")<br>private Airplane airplaneDetail;|@OneToOne(mappedBy = "airplaneDetail")<br>private Flight flight;|
 
@@ -206,8 +206,8 @@ Note:
 
 
 #### JPA 7: One to Many relationship annotations flights and its pilots
-- `Pilot` & `PilotRank`
-- |`Pilot`|`Flight`|
+- `Pilot` & `PilotRank`\
+|`Pilot`|`Flight`|
 |-|-|
 |@ManyToOne<br>@JoinColumn(name = "flight_fk")<br>private Flight flightForPilot;|@OneToMany(mappedBy = "flightForPilot")<br>private List<Pilot> pilots;|
 
@@ -215,6 +215,13 @@ Note:
 #### JPA 8: Persisting pilot objects - One to Many relationship groundwork
 - `PilotService` & `AddPilot`
 
+
+#### JPA 9: Named Queries on Entity classes
+- `@NamedQuery(name="Flight.findById", query="SELECT f FROM Flight f WHERE f.id = :id")`
+- `@NamedQuery(name="Pilot.findById", query="SELECT p FROM Pilot p WHERE p.id = :id")`
+
+The query `SELECT f FROM Flight f WHERE f.id = :id` means:
+select the whole table `Flight` which will be called everywhere (from now) `f`. Then from it, select the row which it's `id -> (f.id)` is equal to given `id -> (:id)`.
 
 
 # How To Use
