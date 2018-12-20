@@ -148,12 +148,24 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - #7: `OK`
 
 #### JPA 0: Connecting to the database with Eclipse
-- Name: `Airline`
-- Username: `Airline`
+- Driver: `Derby Client JDBC Driver`  (check notes down)
+- Database: `Airline`
+- Host: `localhost`
+- Port number: `1527` 
+- User name: `Airline`
 - Password: `Airline`
-- URL: `jdbc:derby://localhost:1527/airline;create=true` or `jdbc:derby:airline;create=true`
 - [x] Create database (if required)
 - [x] Save password
+- URL: `jdbc:derby://localhost:1527/airline;create=true`
+
+
+##### *Some Notes of JPA 0:*
+- When you are creating a new DB Profile, yoou must have all the fields above, if you don't see exactly the same, everything will be wrong in the future. Make sure that the driver is `Derby Client JDBC Driver`, and by clicking on the "Triangle 🔺" button (Edit Driver Definition) & in the "Jar List" tab, check if the `driver file` is set to `derbyclient.jar`.
+- If everything is fine, by pressing the button `Test Connection`, in the folder `...\glassfish5\javadb\bin`, a folder will be created with the name `airline` and a pop-up will tell you `Ping Succeeded`.
+- If you don't see this folder, be sure something is wrong:
+	- You didn't configure `Derby` properly. [click](https://db.apache.org/derby/papers/DerbyTut/install_software.html)
+	- Update your IDE to have the latest drivers & JAR libraries. You may face [this problem](https://bugs.eclipse.org/bugs/show_bug.cgi?id=536970) in `JPA 2` and later
+- After finishing creating a new DB Profile, in `Data Source Explorer` tab, if the database's name is like `Airline (Apache Derby v. 10.14.2.0 - (Unversioned))`, be sure you didn't configure Derby properly. Instead of `Unversioned` there must be a number like "1828579".
 
 #### JPA 1: Creating a Persistence Unit
 - creating `jpa1` project
@@ -166,6 +178,10 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - `@Id` & `@GeneratedValue(strategy = GenerationType.AUTO)`
 - `@Temporal(TemporalType.DATE)`
 - `@Enumerated(EnumType.STRING)` & `@Enumerated(EnumType.STRING)`
+
+
+##### *Some Notes of JPA 2:*
+- If you face `EJB Exception` or `JPAX can not be deployed`, try to remove the project from server and add it again.
 
 
 #### JPA 3: Injecting an Entity Manager associated with out Persistence Unit
@@ -181,14 +197,12 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 #### JPA 5: One to One relationship between Flight and Airplane
 |`Flight`|`Airplane`|
 |-|-|
-|@OneToOne\
-@JoinColumn(name = "airplane_fk")\
-private Airplane airplaneDetail;
-|
-@OneToOne(mappedBy = "airplaneDetail")\
-private Flight flight;
-|
+|@OneToOne<br>@JoinColumn(name = "airplane_fk")<br>private Airplane airplaneDetail;|@OneToOne(mappedBy = "airplaneDetail")<br>private Flight flight;|
 
+
+#### JPA 6: Persisting objects in a One to One relationship Flight and Airplane
+- `FlightService`
+- `AddFlight`
 
 
 # How To Use
