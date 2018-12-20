@@ -180,7 +180,7 @@ Notes\
 - `@Enumerated(EnumType.STRING)` & `@Enumerated(EnumType.STRING)`
 
 
-Note:\
+Note:
 - If you face `EJB Exception` or `JPAx can not be deployed`, try to remove the project from server and add it again.
 
 
@@ -195,7 +195,7 @@ Note:\
 
 
 #### JPA 5: One to One relationship between Flight and Airplane
-|`Flight`|`Airplane`|
+- |`Flight`|`Airplane`|
 |-|-|
 |@OneToOne<br>@JoinColumn(name = "airplane_fk")<br>private Airplane airplaneDetail;|@OneToOne(mappedBy = "airplaneDetail")<br>private Flight flight;|
 
@@ -207,9 +207,14 @@ Note:\
 
 #### JPA 7: One to Many relationship annotations flights and its pilots
 - `Pilot` & `PilotRank`
-|`Pilot`|`Flight`|
+- |`Pilot`|`Flight`|
 |-|-|
 |@ManyToOne<br>@JoinColumn(name = "flight_fk")<br>private Flight flightForPilot;|@OneToMany(mappedBy = "flightForPilot")<br>private List<Pilot> pilots;|
+
+
+#### JPA 8: Persisting pilot objects - One to Many relationship groundwork
+- `PilotService` & `AddPilot`
+
 
 
 # How To Use
@@ -217,7 +222,7 @@ Note:\
 - Import each project you need
 - Add it to the server
 
-Note:\
+Note:
  #1: It is better not to add more than one project at a time. I did not change all the configuration,\
  paths & ... of the projects, so there maybe there is some conflicts while running the application\
  on the server.\
@@ -232,4 +237,4 @@ Note:\
 - Eclipse IDE
 - Java 1.8
 - GlassFish5
-- Apche Derby DB [included in GlassFish5]
+- Apche Derby DB [is included in GlassFish5]
