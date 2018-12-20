@@ -159,7 +159,7 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - URL: `jdbc:derby://localhost:1527/airline;create=true`
 
 
-##### *Some Notes of JPA 0:*
+Notes\
 - When you are creating a new DB Profile, yoou must have all the fields above, if you don't see exactly the same, everything will be wrong in the future. Make sure that the driver is `Derby Client JDBC Driver`, and by clicking on the "Triangle 🔺" button (Edit Driver Definition) & in the "Jar List" tab, check if the `driver file` is set to `derbyclient.jar`.
 - If everything is fine, by pressing the button `Test Connection`, in the folder `...\glassfish5\javadb\bin`, a folder will be created with the name `airline` and a pop-up will tell you `Ping Succeeded`.
 - If you don't see this folder, be sure something is wrong:
@@ -180,8 +180,8 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 - `@Enumerated(EnumType.STRING)` & `@Enumerated(EnumType.STRING)`
 
 
-##### *Some Notes of JPA 2:*
-- If you face `EJB Exception` or `JPAX can not be deployed`, try to remove the project from server and add it again.
+Note:\
+- If you face `EJB Exception` or `JPAx can not be deployed`, try to remove the project from server and add it again.
 
 
 #### JPA 3: Injecting an Entity Manager associated with out Persistence Unit
@@ -203,6 +203,13 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 #### JPA 6: Persisting objects in a One to One relationship Flight and Airplane
 - `FlightService`
 - `AddFlight`
+
+
+#### JPA 7: One to Many relationship annotations flights and its pilots
+- `Pilot` & `PilotRank`
+|`Pilot`|`Flight`|
+|-|-|
+|@ManyToOne<br>@JoinColumn(name = "flight_fk")<br>private Flight flightForPilot;|@OneToMany(mappedBy = "flightForPilot")<br>private List<Pilot> pilots;|
 
 
 # How To Use
