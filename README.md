@@ -220,8 +220,13 @@ Note:
 - `@NamedQuery(name="Flight.findById", query="SELECT f FROM Flight f WHERE f.id = :id")`
 - `@NamedQuery(name="Pilot.findById", query="SELECT p FROM Pilot p WHERE p.id = :id")`
 
-The query `SELECT f FROM Flight f WHERE f.id = :id` means:
+The query `SELECT f FROM Flight f WHERE f.id = :id` means:\
 select the whole table `Flight` which will be called everywhere (from now) `f`. Then from it, select the row which it's `id -> (f.id)` is equal to given `id -> (:id)`.
+
+
+#### JPA 10: Using named queries to query by id
+- `FlightService`
+
 
 
 # How To Use
