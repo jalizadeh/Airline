@@ -238,6 +238,13 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `getFlights()` added to `FlightService`
 
 
+#### JPA 13: Creating a list of flights JSP
+- `Flights`
+- `flights_list.jpa`
+	- NOTE:
+	For printing some data in HTML, it must be put inside `<%= ... %>` and for running a code without any result being printed, use `<% ...; %>`. Take care of using `;` when needed.
+
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
