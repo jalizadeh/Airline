@@ -269,6 +269,10 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `FancyForms` & `fancy_forms.jsp`
 
 
+#### JPA 19: Adding a flight through our JSP form
+- `AddFlight`
+
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
