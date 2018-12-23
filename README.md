@@ -1,8 +1,8 @@
-# Airline
+# [Airline](#)
 
 Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udemy.com/the-java-ee-course/)
 
-# Servlets and JSP
+# [Servlets and JSP](#)
 
 #### Web #1: Creating a Servlet for adding passengers to a flight
 - very first configurations
@@ -46,7 +46,7 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
 
 
 
-# Enterprise Java Beans
+# [Enterprise Java Beans](#)
 
 #### EJB #1: Creating a Stateless Session Bean
 - `com.airline.service.FlightService`
@@ -98,7 +98,7 @@ Source: [The Java EE Course - Build a Java EE App From Scratch](https://www.udem
  Then, the EJB is available, via `session.getAttribute(x,y)`
 
 
-# Java Persistence API JPA & Relational Databases
+# [Java Persistence API JPA & Relational Databases](#)
 
 #### JPA #0: Introduction to the Java Persistence API
 
@@ -234,8 +234,12 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `AddPilotToFlight`
 
 
+#### JPA 12: Reading the list of available flights
+- `getFlights()` added to `FlightService`
 
-# How To Use
+
+
+# [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
 - Import each project you need
 - Add it to the server
@@ -251,7 +255,7 @@ Note:
  project, in a new browser.
 
 
-# Technologies
+# [Technologies](#)
 - Eclipse IDE
 - Java 1.8
 - GlassFish5
