@@ -256,6 +256,11 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `FlightService`
 
 
+#### JPA 16: Reading the list of all passengers
+- `getPassengers()` added to `PassengerService`
+- `Passengers`
+
+
 
 # [How To Use]()
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
