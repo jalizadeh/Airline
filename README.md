@@ -206,7 +206,8 @@ Note:
 
 
 #### JPA 7: One to Many relationship annotations flights and its pilots
-- `Pilot` & `PilotRank`\
+- `Pilot` & `PilotRank`
+
 |`Pilot`|`Flight`|
 |-|-|
 |@ManyToOne<br>@JoinColumn(name = "flight_fk")<br>private Flight flightForPilot;|@OneToMany(mappedBy = "flightForPilot")<br>private List<Pilot> pilots;|
@@ -226,6 +227,11 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 
 #### JPA 10: Using named queries to query by id
 - `FlightService`
+
+
+#### JPA 11: Adding pilots to a flight - One to Many relationship completed
+- `FlightService`
+- `AddPilotToFlight`
 
 
 
