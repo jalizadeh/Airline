@@ -246,6 +246,11 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 
 
 
+#### JPA 14: Displaying in our flights JSP the pilots that belong to each flight
+- `flights_list.jpa`
+
+
+
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
 - Import each project you need
