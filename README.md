@@ -261,6 +261,9 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `Passengers`
 
 
+#### JPA 17: Creating a list of passengers JSP
+- `passengers_list.jpa`
+
 
 # [How To Use]()
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
