@@ -302,6 +302,16 @@ private List<Flight> flights;
 
 
 
+#### JPA 24: Criteria queries of passenger and flight by id
+- `FlightService` > `addPassengerToFlight`
+- `CriteriaQuery` is a way of doing the process of query, but completely with Java Objects and methods. It is longer to code, but safer and more robust than `String Query`
+
+|`CriteriaQuery`|`String Query`|
+|-|-|
+|```javaCriteriaBuilder builder = em.getCriteriaBuilder();<br>CriteriaQuery<Passenger> cqPassenger = builder.createQuery(Passenger.class);<br>Root<Passenger> pRoot = cqPassenger.from(Passenger.class);<br>cqPassenger.select(pRoot).where(builder.equal(pRoot.get("id").as(Integer.class), passengerId));<br>TypedQuery<Passenger> pQuery = em.createQuery(cqPassenger);<br>Passenger p = pQuery.getSingleResult();```|```javaTypedQuery<Passenger> pQuery = em.createQuery("SELECT p FROM Passenger p WHERE p.id = :id", Passenger.class);<br>pQuery.setParameter("id", Integer.parseInt(passengerId));<br>Passenger p = pQuery.getSingleResult();```|
+
+
+
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
 - Import each project you need
