@@ -278,6 +278,19 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `PilotService` > `addNewPilotToFlight`
 
 
+#### JPA 21: Many to Many annotations flights and passengers
+- `Flight`
+```java
+	@ManyToMany
+	@JoinTable(name = "f_p_join" , joinColumns = @JoinColumn(name="flight_fk"), inverseJoinColumns = @JoinColumn(name="passenger_fk"))
+	private List<Passenger> passengers;
+```
+- `Passenger`
+```java
+	@ManyToMany(mappedBy = "passengers")
+	private List<Flight> flights;
+```
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
