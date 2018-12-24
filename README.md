@@ -281,15 +281,21 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 #### JPA 21: Many to Many annotations flights and passengers
 - `Flight`
 ```java
-	@ManyToMany
-	@JoinTable(name = "f_p_join" , joinColumns = @JoinColumn(name="flight_fk"), inverseJoinColumns = @JoinColumn(name="passenger_fk"))
-	private List<Passenger> passengers;
+@ManyToMany
+@JoinTable(name = "f_p_join" , joinColumns = @JoinColumn(name="flight_fk"), inverseJoinColumns = @JoinColumn(name="passenger_fk"))
+private List<Passenger> passengers;
 ```
 - `Passenger`
 ```java
-	@ManyToMany(mappedBy = "passengers")
-	private List<Flight> flights;
+@ManyToMany(mappedBy = "passengers")
+private List<Flight> flights;
 ```
+
+
+#### JPA 22: Groundwork to prepare our Servlets and EJBs for Many to Many operations
+- `FlightService` & `PassengerService` touched
+- `AddPassengerToFlight` & `AddFlightTicketToPassenger` added
+
 
 
 # [How To Use](#)
