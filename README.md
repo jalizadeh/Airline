@@ -308,8 +308,12 @@ private List<Flight> flights;
 
 |`CriteriaQuery`|`String Query`|
 |-|-|
-|```javaCriteriaBuilder builder = em.getCriteriaBuilder();<br>CriteriaQuery<Passenger> cqPassenger = builder.createQuery(Passenger.class);<br>Root<Passenger> pRoot = cqPassenger.from(Passenger.class);<br>cqPassenger.select(pRoot).where(builder.equal(pRoot.get("id").as(Integer.class), passengerId));<br>TypedQuery<Passenger> pQuery = em.createQuery(cqPassenger);<br>Passenger p = pQuery.getSingleResult();```|```javaTypedQuery<Passenger> pQuery = em.createQuery("SELECT p FROM Passenger p WHERE p.id = :id", Passenger.class);<br>pQuery.setParameter("id", Integer.parseInt(passengerId));<br>Passenger p = pQuery.getSingleResult();```|
+|CriteriaBuilder builder = em.getCriteriaBuilder();<br>CriteriaQuery<Passenger> cqPassenger = builder.createQuery(Passenger.class);<br>Root<Passenger> pRoot = cqPassenger.from(Passenger.class);<br>cqPassenger.select(pRoot).where(builder.equal(pRoot.get("id").as(Integer.class), passengerId));<br>TypedQuery<Passenger> pQuery = em.createQuery(cqPassenger);<br>Passenger p = pQuery.getSingleResult();|javaTypedQuery<Passenger> pQuery = em.createQuery("SELECT p FROM Passenger p WHERE p.id = :id", Passenger.class);<br>pQuery.setParameter("id", Integer.parseInt(passengerId));<br>Passenger p = pQuery.getSingleResult();|
 
+
+#### JPA 25: Completing adding a passenger to a flight Many to Many
+- `FlightService` & `flights_list`
+- I added menu to top for easy access
 
 
 # [How To Use](#)
