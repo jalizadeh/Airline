@@ -273,7 +273,6 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 - `AddFlight`
 
 
-
 #### JPA 20: Adding pilots to flights through our JSP form
 - `CreatePilotAndAddToFlight`
 - `PilotService` > `addNewPilotToFlight`
