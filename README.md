@@ -320,6 +320,10 @@ private List<Flight> flights;
 - `passengers_list`
 
 
+#### JPA 27: Adding flight tickets to passengers Many to Many and demo
+- `addFlightTicketToPassenger` completed
+
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
