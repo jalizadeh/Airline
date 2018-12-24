@@ -297,6 +297,10 @@ private List<Flight> flights;
 - `AddPassengerToFlight` & `AddFlightTicketToPassenger` added
 
 
+#### JPA 23: Adding passengers through our JSP form
+- `AddPassenger`
+
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
