@@ -274,6 +274,12 @@ select the whole table `Flight` which will be called everywhere (from now) `f`. 
 
 
 
+#### JPA 20: Adding pilots to flights through our JSP form
+- `CreatePilotAndAddToFlight`
+- `PilotService` > `addNewPilotToFlight`
+
+
+
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
 - Import each project you need
