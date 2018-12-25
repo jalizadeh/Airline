@@ -353,6 +353,13 @@ public class RestApplicationConfig extends javax.ws.rs.core.Application{
 ```
 
 
+#### JAXRS #2: Creating a JAX-RS managed class
+- `FlightsWebService`
+- `PassengersWebService`
+
+
+
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
