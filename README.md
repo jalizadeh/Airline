@@ -375,6 +375,13 @@ public List<Flight> getFlights(){
 |@GET<br>@Produces(MediaType.APPLICATION_XML)<br>public List<Passenger> getPassengers(){<br>List<Passenger> pList = ps.getPassengers();<br>return pList;<br>}|@Entity<br>@XmlRootElement<br>public class Passenger implements Serializable {<br>...<br>}|
 
 
+#### JAXRS #4: 
+##### Exposing WS that return a specific flight or passenger by id in JSON and XML
+##### Handling Not Found exceptions in our web services
+- `FlightService` & `FlightsWebService`
+- `PassengerService` & `PassengersWebService`
+
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
