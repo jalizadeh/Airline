@@ -358,6 +358,21 @@ public class RestApplicationConfig extends javax.ws.rs.core.Application{
 - `PassengersWebService`
 
 
+#### JAXRS #3: Exposing WS that return the list of flights  passengers in JSON  XML
+- `FlightsWebService`
+
+```java
+@GET
+@Produces(MediaType.APPLICATION_JSON)
+public List<Flight> getFlights(){
+	List<Flight> fList = fs.getFlights();
+	return fList;
+}
+```
+
+|`PassengersWebService`|`Passenger`|
+|-|-|
+|@GET<br>@Produces(MediaType.APPLICATION_XML)<br>public List<Passenger> getPassengers(){<br>List<Passenger> pList = ps.getPassengers();<br>return pList;<br>}|@Entity<br>@XmlRootElement<br>public class Passenger implements Serializable {<br>...<br>}|
 
 
 
