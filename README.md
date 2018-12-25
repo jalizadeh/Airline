@@ -325,6 +325,35 @@ private List<Flight> flights;
 
 
 
+
+# [REST Web Services with JAX-RS](#)
+
+#### JAXRS #0: Introduction to Web Services with JAX-RS
+
+#### JAXRS #0: Installing a REST client application in a browser
+- Firefox : [RestClient](https://addons.mozilla.org/en-US/firefox/addon/restclient/)
+- Chrome  : [Advanced Rest Client](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
+- [Postman](https://www.getpostman.com/)
+
+#### JAXRS #1: Adding a REST web services entry point to our airline application
+- In project's `Properties`, find `Project Facet` and enable:
+	- `JAX-RS`, change version to `2.0`
+	- `JAXB`, version `2.2`
+
+```java
+package com.airline.webservices.rest;
+
+import javax.ws.rs.ApplicationPath;
+
+//it is the entry point for rest services
+@ApplicationPath("/airlineservices/rest")
+public class RestApplicationConfig extends javax.ws.rs.core.Application{
+
+}
+```
+
+
+
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
 - Import each project you need
