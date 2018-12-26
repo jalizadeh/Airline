@@ -386,15 +386,29 @@ public List<Flight> getFlights(){
 - `PassengerService` > `addPassengerAndReturnIt`
 - `PassengersWebService`
 
-> POST > Content-Type: application/json
+> POST http://localhost:8080/jaxrs5/airlineservices/rest/passengers/
+> Content-Type : application/json
 ```json
 {
-	"firstName":"Javad",
-	"lastName":"Alizadeh",
-	"dob":"1989-01-10T12:34:56.999",
-	"gender":"Male"
+"firstName":"Javad",
+"lastName":"Alizadeh",
+"dob":"1989-01-10T12:34:56.999",
+"gender":"Male"
 }
 ```
+
+
+#### JAXRS #6: Updating a passenger WS
+- `PassengerService` & `PassengersWebService`
+
+> PUT http://localhost:8080/jaxrs6/airlineservices/rest/passengers/edit/{pId}
+> Content-Type : application/json
+```json
+{
+"lastName":"Alizadeh Shabkhoslati"
+}
+```
+
 
 
 # [How To Use](#)
