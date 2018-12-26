@@ -386,7 +386,7 @@ public List<Flight> getFlights(){
 - `PassengerService` > `addPassengerAndReturnIt`
 - `PassengersWebService`
 
-> POST http://localhost:8080/jaxrs5/airlineservices/rest/passengers/
+> POST http://localhost:8080/jaxrs5/airlineservices/rest/passengers/\
 > Content-Type : application/json
 ```json
 {
@@ -401,12 +401,25 @@ public List<Flight> getFlights(){
 #### JAXRS #6: Updating a passenger WS
 - `PassengerService` & `PassengersWebService`
 
-> PUT http://localhost:8080/jaxrs6/airlineservices/rest/passengers/edit/{pId}
+> PUT http://localhost:8080/jaxrs6/airlineservices/rest/passengers/edit/{pId}\
 > Content-Type : application/json
 ```json
 {
 "lastName":"Alizadeh Shabkhoslati"
 }
+```
+
+
+#### JAXRS #7: Updating a passenger WS done in a different way
+- `PassengerService` & `PassengersWebService`
+
+- `pUpdated` is a pure Java object, so `EntityManager` is not aware of it. Let's put it inside persistence context
+
+```java
+pUpdated.setId(passengerId);
+
+//Merge the state of the given entity into the current persistence context.
+em.merge(pUpdated);
 ```
 
 
