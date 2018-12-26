@@ -382,6 +382,20 @@ public List<Flight> getFlights(){
 - `PassengerService` & `PassengersWebService`
 
 
+#### JAXRS #5: Adding new passengers WS
+- `PassengerService` > `addPassengerAndReturnIt`
+- `PassengersWebService`
+
+> POST > Content-Type: application/json
+```json
+{
+	"firstName":"Javad",
+	"lastName":"Alizadeh",
+	"dob":"1989-01-10T12:34:56.999",
+	"gender":"Male"
+}
+```
+
 
 # [How To Use](#)
 - You need a [GlassFish](https://javaee.github.io/glassfish/) server for running the projects. 
