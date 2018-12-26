@@ -386,8 +386,10 @@ public List<Flight> getFlights(){
 - `PassengerService` > `addPassengerAndReturnIt`
 - `PassengersWebService`
 
-> POST http://localhost:8080/jaxrs5/airlineservices/rest/passengers/\
+> POST http://localhost:8080/jaxrs5/airlineservices/rest/passengers/
+
 > Content-Type : application/json
+
 ```json
 {
 "firstName":"Javad",
@@ -401,8 +403,10 @@ public List<Flight> getFlights(){
 #### JAXRS #6: Updating a passenger WS
 - `PassengerService` & `PassengersWebService`
 
-> PUT http://localhost:8080/jaxrs6/airlineservices/rest/passengers/edit/{pId}\
+> PUT http://localhost:8080/jaxrs6/airlineservices/rest/passengers/edit/{pId}
+
 > Content-Type : application/json
+
 ```json
 {
 "lastName":"Alizadeh Shabkhoslati"
@@ -421,6 +425,21 @@ pUpdated.setId(passengerId);
 //Merge the state of the given entity into the current persistence context.
 em.merge(pUpdated);
 ```
+
+> PUT http://localhost:8080/jaxrs6/airlineservices/rest/passengers/edit2/{pId}
+
+> Content-Type : application/json
+
+
+#### JAXRS #8: Deleting a flight WS  cascade deleting its airplane and pilots
+- `FlightsWebService`
+- `@Transactional`  is needed for `deleteFlight`
+
+- `Flight` > `@OneToMany(mappedBy = "flightForPilot", cascade = {CascadeType.REMOVE})`
+	if a flight is removed, all pilots are deleted too
+
+
+> DELETE http://localhost:8080/jaxrs8/airlineservices/rest/flights/{pId}
 
 
 
